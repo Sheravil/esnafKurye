@@ -18,7 +18,7 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 
 const drawerWidth = 240;
-const navItems = ["Anasayfa", "Ürünler", "Hakkımızda", "İletişim"];
+const navItems = ["Anasayfa", "Hakkımızda", "İletişim"];
 
 export default function Navbar(props) {
   const { window } = props;

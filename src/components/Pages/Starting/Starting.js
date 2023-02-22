@@ -9,23 +9,12 @@ import { Backdrop } from "@mui/material";
 import Home from "../Home/Home";
 
 function Starting() {
-  useEffect(() => {
-    var app = document.getElementById("heads");
-
-    const typewriter = new Typewriter(app, {
-      loop: true,
-      cursor: "_",
-    });
-
-    typewriter.typeString("Mardin Esnaf Kurye ").pauseFor(5000).start();
-  }, []);
-
   const [open, setOpen] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
       setOpen(false);
-    }, 4000);
+    }, 1500);
   }, []);
   return (
     <Box sx={{ color: "#495464" }}>
@@ -44,7 +33,8 @@ function Starting() {
         open={open}
       >
         <div>
-          <h1 id="heads">Mardin</h1>
+          <h1 id="heads">Mardin Esnaf Kurye</h1>
+          <h2>Paket Servis Hizmetleri</h2>
         </div>
       </Backdrop>
     </Box>

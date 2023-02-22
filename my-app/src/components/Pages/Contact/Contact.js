@@ -32,20 +32,20 @@ function Contact() {
               <h3>Paket Servis Hizmetleri</h3>
             </Grid>
             <Grid xs={12}>
-              <a href="tel:+905467432460" style={{ textDecoration: "none" }}>
+              <a href="tel:+905452104247" style={{ textDecoration: "none" }}>
                 <Button
                   variant="contained"
                   sx={{ color: "white" }}
                   startIcon={<CallIcon />}
                 >
-                  0546 743 24 60
+                  0545 210 42 47
                 </Button>
               </a>
             </Grid>
             <Grid xs={12}>
               <ReactWhatsapp
-                number="90-546-743-2460"
-                message="Hello World!!!"
+                number="90-545-210-4247"
+                message="Merhaba Mardin Esnaf Kurye Whatsapp İletişim Hattına Hoşgeldiniz"
                 style={{ border: "none", background: "none" }}
               >
                 <Button

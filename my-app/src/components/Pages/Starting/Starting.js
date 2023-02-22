@@ -22,11 +22,11 @@ function Starting() {
 
   const [open, setOpen] = useState(true);
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setOpen(false);
-  //   }, 4000);
-  // }, []);
+  useEffect(() => {
+    setTimeout(() => {
+      setOpen(false);
+    }, 4000);
+  }, []);
   return (
     <Box sx={{ color: "#495464" }}>
       <Home />

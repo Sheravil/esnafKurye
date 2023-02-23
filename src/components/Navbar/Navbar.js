@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
+import ReactWhatsapp from "react-whatsapp";
 
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -22,7 +25,7 @@ const navItems = ["Anasayfa", "Hakkımızda", "İletişim"];
 
 export default function Navbar(props) {
   const { window } = props;
-  const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -30,11 +33,25 @@ export default function Navbar(props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
+      <Typography variant="h6" sx={{ my: 2, color: "#F07B3F" }}>
         Esnaf Kurye
       </Typography>
+      <hr />
       <Divider />
+
       <List>
+        <Box>
+          <ListItemButton style={{ textAlign: "center" }}>
+            <ListItemText>
+              <Box sx={{ paddingRight: "50%" }}>
+                <LocationOnIcon
+                  sx={{ position: "absolute", color: "#FFCC00" }}
+                />
+              </Box>
+              <Box>Mardin</Box>
+            </ListItemText>
+          </ListItemButton>
+        </Box>
         {navItems.map((item) => (
           <Link
             to={`/${item}`}
@@ -47,6 +64,17 @@ export default function Navbar(props) {
             </ListItem>
           </Link>
         ))}
+        <ReactWhatsapp
+          number="90-545-210-4247"
+          message="Merhaba Mardin Esnaf Kurye Whatsapp İletişim Hattına Hoşgeldiniz"
+          style={{ border: "none", background: "none" }}
+        >
+          <ListItemButton style={{ color: "green" }}>
+            <ListItemText>
+              <WhatsAppIcon /> WhatsApp İletişim
+            </ListItemText>
+          </ListItemButton>
+        </ReactWhatsapp>
       </List>
     </Box>
   );
@@ -66,7 +94,7 @@ export default function Navbar(props) {
             onClick={handleDrawerToggle}
             sx={{ mr: 2, display: { sm: "none" } }}
           >
-            <MenuIcon />
+            <MenuIcon sx={{ color: "#F07B3F" }} />
           </IconButton>
 
           <Typography
@@ -74,11 +102,17 @@ export default function Navbar(props) {
             component="div"
             sx={{
               flexGrow: 1,
-              display: { xs: "block", sm: "flex" },
-              color: "#495464",
+              display: { xs: "flex", sm: "flex" },
+              color: "#F07B3F",
+              paddingLeft: { xs: 10, sm: 5 },
             }}
           >
             Esnaf Kurye
+            <Button
+              sx={{ marginLeft: 10, display: { xs: "none", sm: "block" } }}
+            >
+              <LocationOnIcon /> Mardİn
+            </Button>
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
@@ -88,6 +122,15 @@ export default function Navbar(props) {
                 </Button>
               </Link>
             ))}
+            <ReactWhatsapp
+              number="90-545-210-4247"
+              message="Merhaba Mardin Esnaf Kurye Whatsapp İletişim Hattına Hoşgeldiniz"
+              style={{ border: "none", background: "none" }}
+            >
+              <Button style={{ color: "green", display: "block" }}>
+                <WhatsAppIcon /> WhatsApp İletİşİm
+              </Button>
+            </ReactWhatsapp>
           </Box>
         </Toolbar>
       </AppBar>

@@ -4,7 +4,6 @@ import "./Starting.css";
 import bgImage from "./mardin.jpg";
 
 import Box from "@mui/material/Box";
-import Typewriter from "typewriter-effect/dist/core";
 import { Backdrop } from "@mui/material";
 import Home from "../Home/Home";
 

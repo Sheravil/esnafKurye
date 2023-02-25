@@ -3,5 +3,11 @@
 }
 
 .bgcolor {
-  background-color:  #F4F4F2; 
+  
+    background: linear-gradient(to bottom , #F4F4F2 50%, #ff6d00 50% );
+  
+}
+
+.testColor {
+ color: #4954648a
 }

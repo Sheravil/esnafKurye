@@ -14,7 +14,7 @@ function App() {
       <div className="App">
         <Navbar />
 
-        <div className="container bgcolor ">
+        <div>
           <Switch>
             <Route path="/" exact component={Starting} />
             <Route path="/Anasayfa" exact component={Home} />

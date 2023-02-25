@@ -33,7 +33,7 @@ export default function Navbar(props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2, color: "#FFCC00" }}>
+      <Typography variant="h6" sx={{ my: 2, color: "#495464" }}>
         Esnaf Kurye
       </Typography>
       <hr />
@@ -94,7 +94,7 @@ export default function Navbar(props) {
             onClick={handleDrawerToggle}
             sx={{ mr: 2, display: { sm: "none" } }}
           >
-            <MenuIcon sx={{ color: "#FFCC00" }} />
+            <MenuIcon sx={{ color: "#495464" }} />
           </IconButton>
 
           <Typography
@@ -103,7 +103,7 @@ export default function Navbar(props) {
             sx={{
               flexGrow: 1,
               display: { xs: "flex", sm: "flex" },
-              color: "#FFCC00",
+              color: "#495464",
               paddingLeft: { xs: 10, sm: 5 },
             }}
           >

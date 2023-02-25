@@ -1,5 +1,5 @@
 import Carousel from "react-bootstrap/Carousel";
-import Img from "./mardinM.jpg";
+import Img from "./moto.png";
 import Imge from "./mardin.jpg";
 import { Grid } from "@mui/material";
 
@@ -14,8 +14,8 @@ function UncontrolledExample() {
           <img className="d-block w-100" src={Imge} alt="First slide" />
         </Grid>
         <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <h1>Mardin Esnaf Kurye</h1>
+          <p> Esnaf'lar için teslimatı kolaylaştırıyoruz</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -26,8 +26,8 @@ function UncontrolledExample() {
           <img className="d-block w-100" src={Imge} alt="First slide" />
         </Grid>
         <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h1>İşletmeniz İçin</h1>
+          <p>Hızlı şehir içi kurye teslimat hizmeti</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -38,10 +38,7 @@ function UncontrolledExample() {
           <img className="d-block w-100" src={Imge} alt="First slide" />
         </Grid>
         <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
+          <h3>25 ₺ 'den başlayan fiiyatlarla</h3>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

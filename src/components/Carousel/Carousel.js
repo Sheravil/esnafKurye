@@ -1,6 +1,7 @@
 import Carousel from "react-bootstrap/Carousel";
 import Img from "./moto.png";
-import Imge from "./mardin.jpg";
+import ImgA from "./adress.png";
+import Imge from "./mardin.png";
 import { Grid } from "@mui/material";
 
 function UncontrolledExample() {
@@ -20,7 +21,7 @@ function UncontrolledExample() {
       </Carousel.Item>
       <Carousel.Item>
         <Grid sx={{ display: { xs: "inherit", sm: "none" } }}>
-          <img className="d-block w-100" src={Img} alt="First slide" />
+          <img className="d-block w-100" src={ImgA} alt="First slide" />
         </Grid>
         <Grid sx={{ display: { xs: "none", sm: "inherit" } }}>
           <img className="d-block w-100" src={Imge} alt="First slide" />
@@ -30,7 +31,7 @@ function UncontrolledExample() {
           <p>Hızlı şehir içi kurye teslimat hizmeti</p>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item>
+      {/* <Carousel.Item>
         <Grid sx={{ display: { xs: "inherit", sm: "none" } }}>
           <img className="d-block w-100" src={Img} alt="First slide" />
         </Grid>
@@ -40,7 +41,7 @@ function UncontrolledExample() {
         <Carousel.Caption>
           <h3>25 ₺ 'den başlayan fiiyatlarla</h3>
         </Carousel.Caption>
-      </Carousel.Item>
+      </Carousel.Item> */}
     </Carousel>
   );
 }

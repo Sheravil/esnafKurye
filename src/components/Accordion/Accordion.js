@@ -5,6 +5,8 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Button from "@mui/material/Button";
+import Contact from "../Pages/Contact/Contact";
+import { Link } from "react-router-dom";
 
 export default function ControlledAccordions() {
   const [expanded, setExpanded] = React.useState(true);
@@ -17,11 +19,11 @@ export default function ControlledAccordions() {
     <div className="container" style={{ paddingBottom: "20px" }}>
       <AccordionSummary
         style={{
-          border: "1px dashed #4954648a",
-          borderColor: "#4954648a",
-          backgroundColor: "#E8E8E8",
+          border: "1px dashed #ff6d00",
+          borderColor: "#ff6d00",
+          backgroundColor: "#F4F4F2",
           borderRadius: 1,
-          marginBottom: 5,
+          marginBottom: 1,
           cursor: "default",
         }}
       >
@@ -29,6 +31,18 @@ export default function ControlledAccordions() {
           Hizmetlerimiz
         </Typography>
       </AccordionSummary>
+      <AccordionDetails
+        style={{
+          backgroundColor: "#F4F4F2",
+          border: "1px solid #BBBFCA",
+          borderColor: "#BBBFCA",
+        }}
+      >
+        <Typography>
+          Esnafın Kurye sıkıntılarını giderecek profesyonel ekibimiz ile
+          paketlerinizi hızlı bir şekilde teslim ediyoruz
+        </Typography>
+      </AccordionDetails>
       <Accordion
         expanded={expanded === "panel1"}
         onChange={handleChange("panel1")}
@@ -39,25 +53,28 @@ export default function ControlledAccordions() {
           id="panel1bh-header"
           style={{ backgroundColor: "#F4F4F2" }}
         >
-          <Typography sx={{ width: "100%", flexShrink: 0 }}>
-            Esnaf Kurye
-          </Typography>
+          <Typography sx={{ width: "100%", flexShrink: 0 }}>Yemek</Typography>
         </AccordionSummary>
         <AccordionDetails style={{ backgroundColor: "#F4F4F2" }}>
           <Typography>
-            Mardin Esnafının Kurye sıkıntılarını giderecek profesyonel ekibimiz
-            ile paketlerinizi hızlı bir şekilde teslim etmekteyiz.
+            Yemek siparişlerinizi işletmenizden en kısa sürede alıp adrese
+            teslim ediyoruz.
           </Typography>
           <Typography>
             Detaylı bilgi için{" "}
-            <Button
-              variant="contained"
-              size="small"
-              style={{ backgroundColor: "#ff6d00", textTransform: "none" }}
-            >
-              {" "}
-              tıklayınız.
-            </Button>
+            <Link to="Contact" style={{ textDecoration: "none" }}>
+              <Button
+                variant="contained"
+                size="small"
+                style={{
+                  backgroundColor: "#ff6d00",
+                  textTransform: "none",
+                }}
+              >
+                {" "}
+                tıklayınız
+              </Button>
+            </Link>
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -71,7 +88,7 @@ export default function ControlledAccordions() {
           id="panel2bh-header"
           style={{ backgroundColor: "#F4F4F2" }}
         >
-          <Typography sx={{ width: "100%", flexShrink: 0 }}>Users</Typography>
+          <Typography sx={{ width: "100%", flexShrink: 0 }}>Market</Typography>
         </AccordionSummary>
         <AccordionDetails style={{ backgroundColor: "#F4F4F2" }}>
           <Typography>
@@ -91,9 +108,7 @@ export default function ControlledAccordions() {
           id="panel3bh-header"
           style={{ backgroundColor: "#F4F4F2" }}
         >
-          <Typography sx={{ width: "100%", flexShrink: 0 }}>
-            Advanced settings
-          </Typography>
+          <Typography sx={{ width: "100%", flexShrink: 0 }}>Kıyafet</Typography>
         </AccordionSummary>
         <AccordionDetails style={{ backgroundColor: "#F4F4F2" }}>
           <Typography>
@@ -113,7 +128,7 @@ export default function ControlledAccordions() {
           style={{ backgroundColor: "#F4F4F2" }}
         >
           <Typography sx={{ width: "100%", flexShrink: 0 }}>
-            Personal data
+            Belgeler
           </Typography>
         </AccordionSummary>
         <AccordionDetails style={{ backgroundColor: "#F4F4F2" }}>

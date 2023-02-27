@@ -33,10 +33,17 @@ export default function Navbar(props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2, color: "#495464" }}>
-        Esnaf Kurye
+      <Typography
+        className="logo"
+        variant="h6"
+        sx={{
+          my: 2,
+          color: "#ff6d00",
+          fontFamily: "Chakra Petch",
+        }}
+      >
+        esnafakurye
       </Typography>
-      <hr />
       <Divider />
 
       <List>
@@ -66,7 +73,7 @@ export default function Navbar(props) {
         ))}
         <ReactWhatsapp
           number="90-545-210-4247"
-          message="Merhaba Mardin Esnaf Kurye Whatsapp İletişim Hattına Hoşgeldiniz"
+          message="Merhaba esnafakurye ile ilgili detaylı bilgi almak istiyorum."
           style={{ border: "none", background: "none" }}
         >
           <ListItemButton style={{ color: "green" }}>
@@ -94,26 +101,29 @@ export default function Navbar(props) {
             onClick={handleDrawerToggle}
             sx={{ mr: 2, display: { sm: "none" } }}
           >
-            <MenuIcon sx={{ color: "#495464" }} />
+            <MenuIcon sx={{ color: "#ff6d00" }} />
           </IconButton>
 
           <Typography
             variant="h6"
             component="div"
+            className="logo"
             sx={{
               flexGrow: 1,
               display: { xs: "flex", sm: "flex" },
-              color: "#495464",
+              color: "#ff6d00",
               paddingLeft: { xs: 10, sm: 5 },
+              fontFamily: "Chakra Petch",
             }}
           >
-            Esnaf Kurye
+            esnafakurye
             <Button
               sx={{ marginLeft: 10, display: { xs: "none", sm: "block" } }}
             >
               <LocationOnIcon /> Mardİn
             </Button>
           </Typography>
+
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
               <Link to={`/${item}`} style={{ textDecoration: "none" }}>
@@ -124,7 +134,7 @@ export default function Navbar(props) {
             ))}
             <ReactWhatsapp
               number="90-545-210-4247"
-              message="Merhaba Mardin Esnaf Kurye Whatsapp İletişim Hattına Hoşgeldiniz"
+              message="Merhaba Mardin esnafakurye Whatsapp İletişim Hattına Hoşgeldiniz"
               style={{ border: "none", background: "none" }}
             >
               <Button style={{ color: "green", display: "block" }}>

@@ -20,7 +20,7 @@ function Contact() {
             xs={12}
             sm={6}
             sx={{
-              marginTop: { xs: 0, sm: 3 },
+              marginTop: { xs: 2, sm: 3 },
               padding: { xs: 0, sm: 10 },
               fontSize: { sm: 30 },
             }}
@@ -45,7 +45,7 @@ function Contact() {
             <Grid xs={12}>
               <ReactWhatsapp
                 number="90-545-210-4247"
-                message="Merhaba Mardin Esnaf Kurye Whatsapp İletişim Hattına Hoşgeldiniz"
+                message="Merhaba esnafakurye ile ilgili detaylı bilgi almak istiyorum."
                 style={{ border: "none", background: "none" }}
               >
                 <Button
@@ -53,11 +53,12 @@ function Contact() {
                   sx={{
                     color: "white",
                     marginTop: "10px",
+                    textTransform: "none",
                   }}
                   startIcon={<WhatsAppIcon />}
                   color="success"
                 >
-                  Whats App
+                  WhatsApp
                 </Button>
               </ReactWhatsapp>
             </Grid>

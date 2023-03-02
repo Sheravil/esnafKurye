@@ -13,7 +13,7 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 function Contact() {
   return (
-    <Box component="main" sx={{ p: 3 }} style={{ padding: 0 }}>
+    <Box component="main" style={{ padding: 0 }}>
       <Typography className="Clouds">
         <Grid container>
           <Grid
@@ -22,11 +22,11 @@ function Contact() {
             sx={{
               marginTop: { xs: 2, sm: 3 },
               padding: { xs: 0, sm: 10 },
-              fontSize: { sm: 30 },
+              fontSize: 30,
             }}
           >
             <Grid xs={12}>
-              <h2>Mardin Esnaf Kurye</h2>
+              <h1>Mardin Esnaf Kurye</h1>
             </Grid>
             <Grid xs={12}>
               <h3>Paket Servis Hizmetleri</h3>
@@ -37,6 +37,7 @@ function Contact() {
                   variant="contained"
                   sx={{ color: "white" }}
                   startIcon={<CallIcon />}
+                  color="warning"
                 >
                   0545 210 42 47
                 </Button>

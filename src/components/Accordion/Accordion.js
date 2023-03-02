@@ -4,9 +4,6 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import Button from "@mui/material/Button";
-import Contact from "../Pages/Contact/Contact";
-import { Link } from "react-router-dom";
 
 export default function ControlledAccordions() {
   const [expanded, setExpanded] = React.useState(true);
@@ -28,7 +25,7 @@ export default function ControlledAccordions() {
         }}
       >
         <Typography sx={{ width: "100%", fontSize: "25px" }}>
-          Hizmetlerimiz
+          Fiyat Seçenekleri
         </Typography>
       </AccordionSummary>
       <AccordionDetails
@@ -39,8 +36,7 @@ export default function ControlledAccordions() {
         }}
       >
         <Typography>
-          Esnafın Kurye sıkıntılarını giderecek profesyonel ekibimiz ile
-          paketlerinizi hızlı bir şekilde teslim ediyoruz
+          Fiyat seçeneklerinden size en uygun olanı seçelim.
         </Typography>
       </AccordionDetails>
       <Accordion
@@ -53,28 +49,14 @@ export default function ControlledAccordions() {
           id="panel1bh-header"
           style={{ backgroundColor: "#F4F4F2" }}
         >
-          <Typography sx={{ width: "100%", flexShrink: 0 }}>Yemek</Typography>
+          <Typography sx={{ width: "100%", flexShrink: 0, color: "#495464" }}>
+            Aylık Ödeme
+          </Typography>
         </AccordionSummary>
         <AccordionDetails style={{ backgroundColor: "#F4F4F2" }}>
           <Typography>
-            Yemek siparişlerinizi işletmenizden en kısa sürede alıp adrese
-            teslim ediyoruz.
-          </Typography>
-          <Typography>
-            Detaylı bilgi için{" "}
-            <Link to="Contact" style={{ textDecoration: "none" }}>
-              <Button
-                variant="contained"
-                size="small"
-                style={{
-                  backgroundColor: "#ff6d00",
-                  textTransform: "none",
-                }}
-              >
-                {" "}
-                tıklayınız
-              </Button>
-            </Link>
+            Aylık Ödeme seçeneğinde sabit bir fiyatta belirlenir ve o ay
+            içerisinde ne kadar paket gönderirseniz aynı ücreti ödersiniz.
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -88,13 +70,14 @@ export default function ControlledAccordions() {
           id="panel2bh-header"
           style={{ backgroundColor: "#F4F4F2" }}
         >
-          <Typography sx={{ width: "100%", flexShrink: 0 }}>Market</Typography>
+          <Typography sx={{ width: "100%", flexShrink: 0, color: "#495464" }}>
+            Paket Ödeme
+          </Typography>
         </AccordionSummary>
         <AccordionDetails style={{ backgroundColor: "#F4F4F2" }}>
           <Typography>
-            Donec placerat, lectus sed mattis semper, neque lectus feugiat
-            lectus, varius pulvinar diam eros in elit. Pellentesque convallis
-            laoreet laoreet.
+            Paket Ödeme seçeneğinde paket başı fiyat belirlenir ve gönderim
+            sayısına göre ücreti günlük ve ya haftalık ödersiniz.
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -108,33 +91,14 @@ export default function ControlledAccordions() {
           id="panel3bh-header"
           style={{ backgroundColor: "#F4F4F2" }}
         >
-          <Typography sx={{ width: "100%", flexShrink: 0 }}>Kıyafet</Typography>
-        </AccordionSummary>
-        <AccordionDetails style={{ backgroundColor: "#F4F4F2" }}>
-          <Typography>
-            Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer
-            sit amet egestas eros, vitae egestas augue. Duis vel est augue.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion
-        expanded={expanded === "panel4"}
-        onChange={handleChange("panel4")}
-      >
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel4bh-content"
-          id="panel4bh-header"
-          style={{ backgroundColor: "#F4F4F2" }}
-        >
-          <Typography sx={{ width: "100%", flexShrink: 0 }}>
-            Belgeler
+          <Typography sx={{ width: "100%", flexShrink: 0, color: "#495464" }}>
+            Yüzdelik Ödeme
           </Typography>
         </AccordionSummary>
         <AccordionDetails style={{ backgroundColor: "#F4F4F2" }}>
           <Typography>
-            Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer
-            sit amet egestas eros, vitae egestas augue. Duis vel est augue.
+            Yüzdelik Ödeme seçeneğinde gönderiminizin ücreti üzerinden
+            belirlenecek yüzdelik oranla ödeme yaparsınız.
           </Typography>
         </AccordionDetails>
       </Accordion>

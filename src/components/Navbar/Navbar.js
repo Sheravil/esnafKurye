@@ -42,22 +42,29 @@ export default function Navbar(props) {
           fontFamily: "Chakra Petch",
         }}
       >
-        esnafakurye
+        <Link to="/" style={{ textDecoration: "none", color: "#ff6d00" }}>
+          esnafakurye
+        </Link>
       </Typography>
       <Divider />
 
       <List>
         <Box>
-          <ListItemButton style={{ textAlign: "center" }}>
-            <ListItemText>
-              <Box sx={{ paddingRight: "50%" }}>
-                <LocationOnIcon
-                  sx={{ position: "absolute", color: "#FFCC00" }}
-                />
-              </Box>
-              <Box>Mardin</Box>
-            </ListItemText>
-          </ListItemButton>
+          <Link
+            to="/İletişim"
+            style={{ textDecoration: "none", color: "#495464" }}
+          >
+            <ListItemButton style={{ textAlign: "center" }}>
+              <ListItemText>
+                <Box sx={{ paddingRight: "50%" }}>
+                  <LocationOnIcon
+                    sx={{ position: "absolute", color: "#ff6d00" }}
+                  />
+                </Box>
+                <Box>Mardin</Box>
+              </ListItemText>
+            </ListItemButton>
+          </Link>
         </Box>
         {navItems.map((item) => (
           <Link
@@ -111,17 +118,24 @@ export default function Navbar(props) {
             sx={{
               flexGrow: 1,
               display: { xs: "flex", sm: "flex" },
-              color: "#ff6d00",
               paddingLeft: { xs: 10, sm: 5 },
+              color: "#ff6d00",
               fontFamily: "Chakra Petch",
             }}
           >
-            esnafakurye
-            <Button
-              sx={{ marginLeft: 10, display: { xs: "none", sm: "block" } }}
-            >
-              <LocationOnIcon /> Mardİn
-            </Button>
+            <Link to="/" style={{ textDecoration: "none", color: "#ff6d00" }}>
+              esnafakurye
+            </Link>
+            <Link to="/İletişim" style={{ textDecoration: "none" }}>
+              <Button
+                sx={{
+                  marginLeft: 10,
+                  display: { xs: "none", sm: "block" },
+                }}
+              >
+                <LocationOnIcon /> Mardİn
+              </Button>
+            </Link>
           </Typography>
 
           <Box sx={{ display: { xs: "none", sm: "block" } }}>

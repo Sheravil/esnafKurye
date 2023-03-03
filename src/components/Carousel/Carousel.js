@@ -15,11 +15,8 @@ function UncontrolledExample() {
         <Grid sx={{ display: { xs: "none", sm: "inherit" } }}>
           <img className="d-block w-100" src={Imge} alt="First slide" />
         </Grid>
-        {/* <Carousel.Caption>
-          <h1>Mardin Esnaf Kurye</h1>
-          <p> Esnaf'lar için teslimatı kolaylaştırıyoruz</p>
-        </Carousel.Caption> */}
       </Carousel.Item>
+
       <Carousel.Item>
         <Grid sx={{ display: { xs: "inherit", sm: "none" } }}>
           <img className="d-block w-100" src={ImgA} alt="First slide" />

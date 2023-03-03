@@ -29,6 +29,7 @@ function Home() {
                 textTransform: "none",
                 margin: "10px 0px",
               }}
+              sx={{ fontSize: { xs: "15px", sm: "20px" } }}
             >
               İşletmem için teklif almak istiyorum
             </Button>
@@ -44,6 +45,7 @@ function Home() {
                 textTransform: "none",
                 margin: "10px 0px",
               }}
+              sx={{ fontSize: { xs: "15px", sm: "20px" } }}
             >
               Esnaf Kurye Olmak İstiyorum
             </Button>

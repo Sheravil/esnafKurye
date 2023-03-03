@@ -24,7 +24,7 @@ function About() {
                 className="logo"
                 sx={{
                   flexGrow: 1,
-                  color: "#ff6d00",
+                  color: "#DC0000",
                   fontFamily: "Chakra Petch",
                 }}
               >
@@ -32,7 +32,7 @@ function About() {
                   to="/"
                   style={{
                     textDecoration: "none",
-                    color: "#ff6d00",
+                    color: "#DC0000",
                   }}
                 >
                   <h1>esnafakurye </h1>

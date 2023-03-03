@@ -16,8 +16,8 @@ export default function ControlledAccordions() {
     <div className="container" style={{ paddingBottom: "20px" }}>
       <AccordionSummary
         style={{
-          border: "1px dashed #ff6d00",
-          borderColor: "#ff6d00",
+          border: "3px dashed #DC0000",
+          borderColor: "#DC0000",
           backgroundColor: "#F4F4F2",
           borderRadius: 1,
           marginBottom: 1,

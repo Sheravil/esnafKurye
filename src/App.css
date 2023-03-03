@@ -8,7 +8,7 @@
 
 .bgcolor {
   
-    background: linear-gradient(to bottom , #F4F4F2 50%, #ff6d00 50% );
+    background: linear-gradient(to bottom , #F4F4F2 50%, #DC0000 50% );
   
 }
 
@@ -18,5 +18,5 @@
 
 .logo {
   font-family: 'Chakra Petch', sans-serif;
-  color: #ff6d00;
+  color: #DC0000;
 }

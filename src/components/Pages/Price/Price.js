@@ -5,7 +5,6 @@ import Toolbar from "@mui/material/Toolbar";
 import { Grid } from "@mui/material";
 import Accordion from "../../Accordion/Accordion";
 import Img from "./contract.png";
-import { height } from "@mui/system";
 
 function Price() {
   return (

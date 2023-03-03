@@ -38,11 +38,11 @@ export default function Navbar(props) {
         variant="h6"
         sx={{
           my: 2,
-          color: "#ff6d00",
+          color: "#DC0000",
           fontFamily: "Chakra Petch",
         }}
       >
-        <Link to="/" style={{ textDecoration: "none", color: "#ff6d00" }}>
+        <Link to="/" style={{ textDecoration: "none", color: "#DC0000" }}>
           esnafakurye
         </Link>
       </Typography>
@@ -58,7 +58,7 @@ export default function Navbar(props) {
               <ListItemText>
                 <Box sx={{ paddingRight: "50%" }}>
                   <LocationOnIcon
-                    sx={{ position: "absolute", color: "#ff6d00" }}
+                    sx={{ position: "absolute", color: "#DC0000" }}
                   />
                 </Box>
                 <Box>Mardin</Box>
@@ -108,7 +108,7 @@ export default function Navbar(props) {
             onClick={handleDrawerToggle}
             sx={{ mr: 2, display: { sm: "none" } }}
           >
-            <MenuIcon sx={{ color: "#ff6d00" }} />
+            <MenuIcon sx={{ color: "#DC0000" }} />
           </IconButton>
 
           <Typography
@@ -119,11 +119,11 @@ export default function Navbar(props) {
               flexGrow: 1,
               display: { xs: "flex", sm: "flex" },
               paddingLeft: { xs: 10, sm: 5 },
-              color: "#ff6d00",
+              color: "#DC0000",
               fontFamily: "Chakra Petch",
             }}
           >
-            <Link to="/" style={{ textDecoration: "none", color: "#ff6d00" }}>
+            <Link to="/" style={{ textDecoration: "none", color: "#DC0000" }}>
               esnafakurye
             </Link>
             <Link to="/İletişim" style={{ textDecoration: "none" }}>

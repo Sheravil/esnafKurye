@@ -20,7 +20,7 @@ function Contact() {
             xs={12}
             sm={6}
             sx={{
-              marginTop: { xs: 2, sm: 3 },
+              marginTop: { xs: 5, sm: 3 },
               padding: { xs: 0, sm: 10 },
               fontSize: 30,
             }}
@@ -35,9 +35,12 @@ function Contact() {
               <a href="tel:+905452104247" style={{ textDecoration: "none" }}>
                 <Button
                   variant="contained"
-                  sx={{ color: "white" }}
+                  sx={{
+                    color: "#DC0000",
+                    backgroundColor: "white",
+                    fontWeight: "bold",
+                  }}
                   startIcon={<CallIcon />}
-                  color="warning"
                 >
                   0545 210 42 47
                 </Button>
@@ -55,6 +58,7 @@ function Contact() {
                     color: "white",
                     marginTop: "10px",
                     textTransform: "none",
+                    fontWeight: "bold",
                   }}
                   startIcon={<WhatsAppIcon />}
                   color="success"

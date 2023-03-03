@@ -25,7 +25,7 @@ function Home() {
               variant="contained"
               size="small"
               style={{
-                backgroundColor: "#ff6d00",
+                backgroundColor: "#DC0000",
                 textTransform: "none",
                 margin: "10px 0px",
               }}
@@ -41,7 +41,7 @@ function Home() {
               variant="contained"
               size="small"
               style={{
-                backgroundColor: "#ff6d00",
+                backgroundColor: "#DC0000",
                 textTransform: "none",
                 margin: "10px 0px",
               }}

@@ -11,6 +11,7 @@ import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
 import Checkbox from "@mui/material/Checkbox";
 import Button from "@mui/material/Button";
+import { red } from "@mui/material/colors";
 
 import img from "./kurye-ol.png";
 
@@ -34,6 +35,8 @@ function Worker() {
 
   const labell = { inputProps: { "aria-label": "Checkbox demo" } };
 
+  const reds = red[500];
+
   return (
     <Box noValidate autoComplete="off">
       <Toolbar />
@@ -42,7 +45,7 @@ function Worker() {
         <Grid>
           <span
             style={{
-              color: "#ff6d00",
+              color: "#DC0000",
               fontFamily: "Chakra Petch",
               fontSize: "30px",
             }}
@@ -67,7 +70,7 @@ function Worker() {
           id="outlined-basic"
           label="İsim"
           variant="outlined"
-          color="warning"
+          color="error"
         />
         <br />
         <br />
@@ -77,7 +80,7 @@ function Worker() {
           id="outlined-basic"
           label="Soyisim"
           variant="outlined"
-          color="warning"
+          color="error"
         />
         <br />
         <br />
@@ -87,7 +90,7 @@ function Worker() {
           id="outlined-basic"
           label="Yaş"
           variant="outlined"
-          color="warning"
+          color="error"
         />
         <br />
         <br />
@@ -97,7 +100,7 @@ function Worker() {
           id="outlined-basic"
           label="Telefon Numarası"
           variant="outlined"
-          color="warning"
+          color="error"
         />
         <br />
         <br />
@@ -107,7 +110,7 @@ function Worker() {
           id="outlined-basic"
           label="Email"
           variant="outlined"
-          color="warning"
+          color="error"
         />
         <br />
         <br />
@@ -118,7 +121,7 @@ function Worker() {
             margin: "0px 70px",
           }}
         >
-          <FormControl color="warning" sx={{ alignItems: "center" }}>
+          <FormControl color="error" sx={{ alignItems: "center" }}>
             <br />
             <FormLabel id="demo-radio-buttons-group-label">
               Çalışma Saatlerinizi Seçin
@@ -132,12 +135,12 @@ function Worker() {
               <br />
               <FormControlLabel
                 value="full"
-                control={<Radio color="warning" />}
+                control={<Radio color="error" />}
                 label="Tam Zamanlı"
               />
               <FormControlLabel
                 value="part"
-                control={<Radio color="warning" />}
+                control={<Radio color="error" />}
                 label="Yarı Zamanlı"
               />
             </RadioGroup>
@@ -153,7 +156,7 @@ function Worker() {
             padding: "0px 20px",
           }}
         >
-          <FormControl color="warning" sx={{ alignItems: "center" }}>
+          <FormControl color="error" sx={{ alignItems: "center" }}>
             <br />
             <FormLabel id="demo-radio-buttons-group-label">
               Çalışma Seçenekleri
@@ -167,13 +170,13 @@ function Worker() {
               <br />
               <FormControlLabel
                 value="mymoto"
-                control={<Radio color="warning" />}
+                control={<Radio color="error" />}
                 label="Kendi motorumla çalışmak istiyorum"
               />
               <br />
               <FormControlLabel
                 value="yourmoto"
-                control={<Radio color="warning" />}
+                control={<Radio color="error" />}
                 label="Şirket motoruyla çalışmak istiyorum"
               />
             </RadioGroup>
@@ -189,7 +192,7 @@ function Worker() {
             padding: 0,
           }}
         >
-          <FormControl fullWidth color="warning">
+          <FormControl fullWidth color="error">
             <InputLabel id="demo-simple-select-label">
               Kaç Yıllık Deneyiminiz Var?
             </InputLabel>
@@ -199,7 +202,7 @@ function Worker() {
               value={values.year}
               label="Kaç Yıllık Deneyiminiz Var?"
               onChange={handleChange}
-              color="warning"
+              color="error"
               name="year"
             >
               <MenuItem value={0}>0</MenuItem>
@@ -224,7 +227,7 @@ function Worker() {
           <span>
             <Checkbox
               {...labell}
-              color="warning"
+              color="error"
               name="licence"
               value="A1"
               onChange={handleChange}
@@ -234,7 +237,7 @@ function Worker() {
           <span>
             <Checkbox
               {...labell}
-              color="warning"
+              color="error"
               name="licence"
               value="A2"
               onChange={handleChange}
@@ -244,7 +247,7 @@ function Worker() {
           <span>
             <Checkbox
               {...labell}
-              color="warning"
+              color="error"
               name="licence"
               value="B"
               onChange={handleChange}
@@ -256,16 +259,16 @@ function Worker() {
         </Box>
 
         <br />
-        <Button variant="contained" type="submit" color="warning">
+        <Button variant="contained" type="submit" color="error">
           Formu Gönder
         </Button>
         <br />
         <br />
-        <Box style={{ padding: 50 }}>
+        {/* <Box style={{ padding: 50 }}>
           <Grid xs={2}></Grid>
           <Grid xs={8}>{JSON.stringify(values).split(",").join(" ")}</Grid>
           <Grid xs={2}></Grid>
-        </Box>
+        </Box> */}
         <br />
       </form>
     </Box>

@@ -21,6 +21,8 @@ function App() {
             <Route path="/Hakkımızda" component={About} />
             <Route path="/İletişim" component={ContactPage} />
             <Route path="/Teklif" component={Price} />
+            <Route path="/İşletmeniz İçin Teklif Alın" component={Price} />
+            <Route path="/Esnaf Kurye Ol" component={Worker} />
             <Route path="/Kurye" component={Worker} />
           </Switch>
         </div>

@@ -10,6 +10,8 @@ import ReactWhatsapp from "react-whatsapp";
 
 import CallIcon from "@mui/icons-material/Call";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import LocalPostOfficeIcon from "@mui/icons-material/LocalPostOffice";
+import InstagramIcon from "@mui/icons-material/Instagram";
 
 function Contact() {
   return (
@@ -20,7 +22,7 @@ function Contact() {
             xs={12}
             sm={6}
             sx={{
-              marginTop: { xs: 5, sm: 3 },
+              marginTop: { xs: 3, sm: 3 },
               padding: { xs: 0, sm: 10 },
               fontSize: 30,
             }}
@@ -43,6 +45,43 @@ function Contact() {
                   startIcon={<CallIcon />}
                 >
                   0545 210 42 47
+                </Button>
+              </a>
+            </Grid>
+            <Grid xs={12}>
+              <a
+                href="mailto:esnafakurye@gmail.com"
+                style={{ textDecoration: "none" }}
+              >
+                <Button
+                  variant="contained"
+                  sx={{
+                    color: "#DC0000",
+                    backgroundColor: "white",
+                    fontWeight: "bold",
+                    textTransform: "none",
+                    marginTop: "10px",
+                  }}
+                  startIcon={<LocalPostOfficeIcon />}
+                >
+                  esnafakurye@gmail.com
+                </Button>
+              </a>
+            </Grid>
+            <Grid xs={12}>
+              <a href="#" style={{ textDecoration: "none" }}>
+                <Button
+                  variant="contained"
+                  sx={{
+                    color: "#DC0000",
+                    backgroundColor: "white",
+                    fontWeight: "bold",
+                    textTransform: "none",
+                    marginTop: "10px",
+                  }}
+                  startIcon={<InstagramIcon />}
+                >
+                  esnafakurye
                 </Button>
               </a>
             </Grid>

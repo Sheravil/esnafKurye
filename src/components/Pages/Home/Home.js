@@ -18,8 +18,8 @@ function Home() {
         <p>Kuryemiz size telefonunuz kadar yakın</p>
       </Grid>
       <Grid container sx={{ p: 5 }}>
-        <Grid sm={3}></Grid>
-        <Grid xs={12} sm={3}>
+        <Grid sm={2}></Grid>
+        <Grid xs={12} sm={4}>
           <Link to="Teklif" style={{ textDecoration: "none" }}>
             <Button
               variant="contained"
@@ -35,7 +35,7 @@ function Home() {
             </Button>
           </Link>
         </Grid>
-        <Grid xs={12} sm={3}>
+        <Grid xs={12} sm={4}>
           <Link to="Kurye" style={{ textDecoration: "none" }}>
             <Button
               variant="contained"
@@ -51,7 +51,7 @@ function Home() {
             </Button>
           </Link>
         </Grid>
-        <Grid sm={3}></Grid>
+        <Grid sm={2}></Grid>
       </Grid>
       <Grid container className="bgcolor">
         <Grid xs={1} sm={2}></Grid>

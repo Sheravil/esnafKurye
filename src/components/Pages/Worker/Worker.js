@@ -25,6 +25,7 @@ function Worker() {
       worktime: "çalışmaSaati",
       worktype: "çalışmaŞekli",
       year: "Tecrübe",
+      whereWork: "nerede",
       licence: "Ehliyet",
     },
     onSubmit: (values) => {
@@ -54,8 +55,12 @@ function Worker() {
           </span>
         </Grid>
       </Grid>
-      <Grid className="bgcolor">
-        <img src={img} alt="" height={300} />
+      <Grid className="bgcolor" xs={12}>
+        <img
+          src={img}
+          alt=""
+          style={{ padding: "20px 0px", maxWidth: "100%", maxHeight: "400px" }}
+        />
       </Grid>
       <Toolbar />
       <h1>Hemen başvurunu yap</h1>
@@ -109,6 +114,17 @@ function Worker() {
           variant="outlined"
           color="error"
         />
+        <br />
+        <br />
+        <TextField
+          name="whereWork"
+          onChange={handleChange}
+          id="outlined-basic"
+          label="Nerelerde Çalıştınız ?"
+          variant="outlined"
+          color="error"
+        />
+
         <br />
         <br />
         <Box
@@ -254,7 +270,6 @@ function Worker() {
           <br />
           <br />
         </Box>
-
         <br />
         <Button variant="contained" type="submit" color="error">
           Formu Gönder

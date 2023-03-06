@@ -34,13 +34,58 @@ function Contact() {
               <h3>Paket Servis Hizmetleri</h3>
             </Grid>
             <Grid xs={12}>
-              <a href="tel:+905452104247" style={{ textDecoration: "none" }}>
+              <ReactWhatsapp
+                number="90-545-210-4247"
+                message="Merhaba esnafakurye ile ilgili detaylı bilgi almak istiyorum."
+                style={{ border: "none", background: "none" }}
+              >
                 <Button
                   variant="contained"
                   sx={{
-                    color: "#DC0000",
-                    backgroundColor: "white",
+                    color: "green",
+                    textTransform: "none",
                     fontWeight: "bold",
+                    backgroundColor: "F4F4F2",
+                  }}
+                  startIcon={<WhatsAppIcon />}
+                  color="inherit"
+                >
+                  WhatsApp
+                </Button>
+              </ReactWhatsapp>
+            </Grid>
+            <Grid xs={12}>
+              <a
+                href="https://www.instagram.com/esnafa_kurye/?igshid=NmQ2ZmYxZjA%3Dm"
+                style={{ textDecoration: "none" }}
+              >
+                <Button
+                  variant="contained"
+                  color="inherit"
+                  sx={{
+                    color: "#DC0000",
+                    backgroundColor: "F4F4F2",
+                    fontWeight: "bold",
+                    textTransform: "none",
+                    marginTop: "10px",
+                  }}
+                  startIcon={<InstagramIcon />}
+                >
+                  esnafa_kurye
+                </Button>
+              </a>
+            </Grid>
+            <Grid xs={12}>
+              <a href="tel:+905452104247" style={{ textDecoration: "none" }}>
+                <Button
+                  className="hovercolor"
+                  variant="contained"
+                  color="inherit"
+                  sx={{
+                    color: "#DC0000",
+                    backgroundColor: "F4F4F2",
+                    fontWeight: "bold",
+                    marginTop: "10px",
                   }}
                   startIcon={<CallIcon />}
                 >
@@ -55,56 +100,19 @@ function Contact() {
               >
                 <Button
                   variant="contained"
+                  color="inherit"
                   sx={{
                     color: "#DC0000",
-                    backgroundColor: "white",
                     fontWeight: "bold",
                     textTransform: "none",
                     marginTop: "10px",
+                    backgroundColor: "F4F4F2",
                   }}
                   startIcon={<LocalPostOfficeIcon />}
                 >
                   esnafakurye@gmail.com
                 </Button>
               </a>
-            </Grid>
-            <Grid xs={12}>
-              <a href="#" style={{ textDecoration: "none" }}>
-                <Button
-                  variant="contained"
-                  sx={{
-                    color: "#DC0000",
-                    backgroundColor: "white",
-                    fontWeight: "bold",
-                    textTransform: "none",
-                    marginTop: "10px",
-                  }}
-                  startIcon={<InstagramIcon />}
-                >
-                  esnafakurye
-                </Button>
-              </a>
-            </Grid>
-            <Grid xs={12}>
-              <ReactWhatsapp
-                number="90-545-210-4247"
-                message="Merhaba esnafakurye ile ilgili detaylı bilgi almak istiyorum."
-                style={{ border: "none", background: "none" }}
-              >
-                <Button
-                  variant="contained"
-                  sx={{
-                    color: "white",
-                    marginTop: "10px",
-                    textTransform: "none",
-                    fontWeight: "bold",
-                  }}
-                  startIcon={<WhatsAppIcon />}
-                  color="success"
-                >
-                  WhatsApp
-                </Button>
-              </ReactWhatsapp>
             </Grid>
           </Grid>
           <Grid xs={12} sm={5}>

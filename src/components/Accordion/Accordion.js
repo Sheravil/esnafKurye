@@ -36,7 +36,7 @@ export default function ControlledAccordions() {
         }}
       >
         <Typography>
-          Fiyat seçeneklerinden size en uygun olanı seçelim.
+          Fiyat seçeneklerinden size en uygun olanı seçin.
         </Typography>
       </AccordionDetails>
       <Accordion

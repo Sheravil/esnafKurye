@@ -12,6 +12,7 @@ function Home() {
     <Box style={{ color: "#495464" }}>
       <Toolbar />
       <Toolbar />
+
       <Grid xs={12}>
         <h1>Mardin Esnaf Kurye</h1>
         <h1>Paket Servis Hizmetleri</h1>

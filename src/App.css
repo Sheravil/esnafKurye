@@ -20,3 +20,7 @@
   font-family: 'Chakra Petch', sans-serif;
   color: #DC0000;
 }
+
+.hovercolor .css-1trvx5r-MuiButtonBase-root-MuiButton-root:hover {
+  background-color: cyan;
+}

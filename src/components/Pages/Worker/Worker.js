@@ -11,7 +11,6 @@ import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
 import Checkbox from "@mui/material/Checkbox";
 import Button from "@mui/material/Button";
-import { red } from "@mui/material/colors";
 
 import img from "./kurye-ol.png";
 
@@ -34,8 +33,6 @@ function Worker() {
   });
 
   const labell = { inputProps: { "aria-label": "Checkbox demo" } };
-
-  const reds = red[500];
 
   return (
     <Box noValidate autoComplete="off">

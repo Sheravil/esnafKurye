@@ -6,15 +6,22 @@
 }
 
 .Animate {
-    position: relative;
-    animation: mymove 5s infinite;
-    display: flex;
-    animation-fill-mode: forwards;
+  display: flex;
+  position: relative;
+  animation-name: example;
+  animation-duration: 1.5s;  
+  animation-delay: 0.3s;
+  animation-fill-mode: both;
+
   }
   
-  #anime {animation-timing-function: ease-in;}
   
-  @keyframes mymove {
-    from {left: -100px;}
-    to {left: 500px;}
+  @keyframes example {
+    from {left: -100px; }
+    to {left: 50%; }
   }
+
+  /* @keyframes mymove {
+    from {left: 0px;}
+    to {left: 175px;}
+  } */

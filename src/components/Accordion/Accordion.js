@@ -30,7 +30,7 @@ export default function ControlledAccordions() {
       </AccordionSummary>
       <AccordionDetails
         style={{
-          backgroundColor: "#F4F4F2",
+          backgroundColor: "#ffbaba",
           border: "1px solid #BBBFCA",
           borderColor: "#BBBFCA",
         }}
@@ -47,9 +47,9 @@ export default function ControlledAccordions() {
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1bh-content"
           id="panel1bh-header"
-          style={{ backgroundColor: "#F4F4F2" }}
+          style={{ backgroundColor: "	#ff7b7b" }}
         >
-          <Typography sx={{ width: "100%", flexShrink: 0, color: "#495464" }}>
+          <Typography sx={{ width: "100%", flexShrink: 0, color: "white" }}>
             Aylık Ödeme
           </Typography>
         </AccordionSummary>
@@ -68,9 +68,9 @@ export default function ControlledAccordions() {
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2bh-content"
           id="panel2bh-header"
-          style={{ backgroundColor: "#F4F4F2" }}
+          style={{ backgroundColor: "#ff5252" }}
         >
-          <Typography sx={{ width: "100%", flexShrink: 0, color: "#495464" }}>
+          <Typography sx={{ width: "100%", flexShrink: 0, color: "white" }}>
             Paket Ödeme
           </Typography>
         </AccordionSummary>
@@ -89,9 +89,9 @@ export default function ControlledAccordions() {
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel3bh-content"
           id="panel3bh-header"
-          style={{ backgroundColor: "#F4F4F2" }}
+          style={{ backgroundColor: "#DC0000" }}
         >
-          <Typography sx={{ width: "100%", flexShrink: 0, color: "#495464" }}>
+          <Typography sx={{ width: "100%", flexShrink: 0, color: "white" }}>
             Yüzdelik Ödeme
           </Typography>
         </AccordionSummary>

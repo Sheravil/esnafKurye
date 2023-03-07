@@ -17,20 +17,16 @@ function Price() {
         <Grid xs={12} className="bgcolor " sx={{ p: "5px 50px" }}>
           <img src={Img} alt="First slide" height={400} />
         </Grid>
-        <Toolbar />
-        <Grid container>
-          <Grid sm={2}></Grid>
-          <Grid sm={8}>
-            <Accordion />
+        <Grid>
+          <Toolbar />
+          <Grid container>
+            <Grid sm={2}></Grid>
+            <Grid sm={8}>
+              <Accordion />
+            </Grid>
+            <Grid sm={2}></Grid>
           </Grid>
-          <Grid sm={2}></Grid>
         </Grid>
-      </Grid>
-      <Grid sx={{ p: 3 }}>
-        <h5>
-          Detaylı bilgi için iletişim numaramız veya WhatsApp hattından bize
-          ulaşabilirsiniz
-        </h5>
       </Grid>
     </Box>
   );

@@ -10,7 +10,12 @@ function UncontrolledExample() {
     <Carousel>
       <Carousel.Item>
         <Grid sx={{ display: { xs: "inherit", sm: "none" } }}>
-          <img className="d-block w-100 " src={Img} alt="First slide" />
+          <img
+            className="d-block w-100 "
+            src={Img}
+            alt="First slide"
+            height={450}
+          />
         </Grid>
         <Grid sx={{ display: { xs: "none", sm: "inherit" } }}>
           <img className="d-block w-100" src={Imge} alt="First slide" />
@@ -19,7 +24,12 @@ function UncontrolledExample() {
 
       <Carousel.Item>
         <Grid sx={{ display: { xs: "inherit", sm: "none" } }}>
-          <img className="d-block w-100" src={ImgA} alt="First slide" />
+          <img
+            className="d-block w-100"
+            src={ImgA}
+            alt="First slide"
+            height={450}
+          />
         </Grid>
         <Grid sx={{ display: { xs: "none", sm: "inherit" } }}>
           <img className="d-block w-100" src={ImgW} alt="First slide" />

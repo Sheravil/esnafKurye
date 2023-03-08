@@ -13,25 +13,28 @@ import Checkbox from "@mui/material/Checkbox";
 import Button from "@mui/material/Button";
 
 import img from "./kurye-ol.png";
+import validationSchema from "./Validations";
 
 function Worker() {
-  const { handleSubmit, handleChange, values } = useFormik({
-    initialValues: {
-      firstName: "İsim",
-      lastName: "Soyisim",
-      age: "Yaş",
-      number: "TelefonNumarası",
-      email: "email",
-      worktime: "çalışmaSaati",
-      worktype: "çalışmaŞekli",
-      year: "Tecrübe",
-      whereWork: "nerede",
-      licence: "Ehliyet",
-    },
-    onSubmit: (values) => {
-      console.log(values);
-    },
-  });
+  const { handleSubmit, handleChange, handleBlur, values, errors, touched } =
+    useFormik({
+      initialValues: {
+        firstName: "İsim",
+        lastName: "Soyisim",
+        age: "Yaş",
+        number: "TelefonNumarası",
+        email: "email",
+        worktime: "çalışmaSaati",
+        worktype: "çalışmaŞekli",
+        year: "Tecrübe",
+        whereWork: "nerede",
+        licence: "Ehliyet",
+      },
+      onSubmit: (values) => {
+        console.log(values);
+      },
+      validationSchema,
+    });
 
   const labell = { inputProps: { "aria-label": "Checkbox demo" } };
 
@@ -113,7 +116,11 @@ function Worker() {
           label="Email"
           variant="outlined"
           color="error"
+          onBlur={handleBlur}
         />
+        {errors.email && touched.email && (
+          <div className="errorText">Error</div>
+        )}
         <br />
         <br />
         <TextField

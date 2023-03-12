@@ -24,3 +24,10 @@
 .hovercolor .css-1trvx5r-MuiButtonBase-root-MuiButton-root:hover {
   background-color: cyan;
 }
+
+.errorText{
+  font-size: small;
+  color: #DC0000;
+  margin-bottom: -45px;
+
+}

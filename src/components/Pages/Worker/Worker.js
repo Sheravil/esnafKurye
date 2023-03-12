@@ -80,7 +80,7 @@ function Worker() {
           onBlur={handleBlur}
         />
         {errors.firstName && touched.firstName ? (
-          <div>{errors.firstName}</div>
+          <div className="errorText">{errors.firstName}</div>
         ) : null}
 
         <br />
@@ -95,7 +95,7 @@ function Worker() {
           onBlur={handleBlur}
         />
         {errors.lastName && touched.lastName ? (
-          <div>{errors.lastName}</div>
+          <div className="errorText">{errors.lastName}</div>
         ) : null}
         <br />
         <br />
@@ -106,18 +106,11 @@ function Worker() {
           label="Yaş"
           variant="outlined"
           color="error"
+          onBlur={handleBlur}
         />
-        {errors.age && touched.age && (
-          <div
-            style={{
-              fontSize: "small",
-              color: "#DC0000",
-              marginBottom: "-59px",
-            }}
-          >
-            <p>Lütfen geçerli bir name giriniz</p>
-          </div>
-        )}
+        {errors.age && touched.age ? (
+          <div className="errorText">{errors.age}</div>
+        ) : null}
         <br />
         <br />
         <TextField
@@ -127,7 +120,11 @@ function Worker() {
           label="Telefon Numarası"
           variant="outlined"
           color="error"
+          onBlur={handleBlur}
         />
+        {errors.number && touched.number ? (
+          <div className="errorText">{errors.number}</div>
+        ) : null}
         <br />
         <br />
         <TextField
@@ -140,16 +137,7 @@ function Worker() {
           onBlur={handleBlur}
         />
         {errors.email && touched.email && (
-          <div
-            className="errorText"
-            style={{
-              fontSize: "small",
-              color: "#DC0000",
-              marginBottom: "-59px",
-            }}
-          >
-            <p>Lütfen geçerli bir email giriniz</p>
-          </div>
+          <div className="errorText">{errors.email}</div>
         )}
 
         <br />
@@ -161,10 +149,15 @@ function Worker() {
           label="Nerelerde Çalıştınız ?"
           variant="outlined"
           color="error"
+          onBlur={handleBlur}
         />
+        {errors.whereWork && touched.whereWork ? (
+          <div className="errorText">{errors.whereWork}</div>
+        ) : null}
 
         <br />
         <br />
+
         <Box
           style={{
             border: "1px solid rgba(128, 128, 128, 0.237)",

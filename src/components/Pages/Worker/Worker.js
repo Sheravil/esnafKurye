@@ -1,6 +1,6 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { useFormik } from "formik";
-import { Box, Toolbar, Grid, TextField, Alert } from "@mui/material";
+import { Box, Toolbar, Grid, TextField } from "@mui/material";
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
@@ -15,6 +15,7 @@ import emailjs from "@emailjs/browser";
 
 import img from "./kurye-ol.png";
 import validationSchema from "./Validations";
+import BcDrop from "../../BcDrop/BcDrop";
 
 function Worker() {
   const { handleSubmit, handleChange, handleBlur, values, errors, touched } =
@@ -325,15 +326,14 @@ function Worker() {
           <br />
         </Box>
         <br />
-        <Button
+        <BcDrop
           onClick={sendEmail}
           variant="contained"
           type="submit"
           color="error"
           ref={form}
-        >
-          Formu Gönder
-        </Button>
+        />
+
         <br />
         <br />
         {/* <Box style={{ padding: 50 }}>

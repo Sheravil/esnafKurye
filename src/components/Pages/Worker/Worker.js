@@ -1,6 +1,6 @@
 import React from "react";
 import { useFormik } from "formik";
-import { Box, Toolbar, Grid, TextField } from "@mui/material";
+import { Box, Toolbar, Grid, TextField, Alert } from "@mui/material";
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
@@ -19,7 +19,7 @@ function Worker() {
   const { handleSubmit, handleChange, handleBlur, values, errors, touched } =
     useFormik({
       initialValues: {
-        firstName: "İsim",
+        name: "İsim",
         lastName: "Soyisim",
         age: "Yaş",
         number: "TelefonNumarası",
@@ -30,6 +30,7 @@ function Worker() {
         whereWork: "nerede",
         licence: "Ehliyet",
       },
+
       onSubmit: (values) => {
         console.log(values);
       },
@@ -37,6 +38,8 @@ function Worker() {
     });
 
   const labell = { inputProps: { "aria-label": "Checkbox demo" } };
+
+  console.log(errors, "hata");
 
   return (
     <Box noValidate autoComplete="off">
@@ -70,13 +73,26 @@ function Worker() {
       <form onSubmit={handleSubmit}>
         <br />
         <TextField
-          name="firstName"
+          name="name"
           onChange={handleChange}
           id="outlined-basic"
           label="İsim"
           variant="outlined"
           color="error"
+          onBlur={handleBlur}
         />
+        {errors.name && touched.name && (
+          <div
+            style={{
+              fontSize: "small",
+              color: "#DC0000",
+              marginBottom: "-59px",
+            }}
+          >
+            <p>Lütfen geçerli bir name giriniz</p>
+          </div>
+        )}
+
         <br />
         <br />
         <TextField
@@ -86,7 +102,9 @@ function Worker() {
           label="Soyisim"
           variant="outlined"
           color="error"
+          onBlur={handleBlur}
         />
+
         <br />
         <br />
         <TextField
@@ -119,8 +137,18 @@ function Worker() {
           onBlur={handleBlur}
         />
         {errors.email && touched.email && (
-          <div className="errorText">Error</div>
+          <div
+            className="errorText"
+            style={{
+              fontSize: "small",
+              color: "#DC0000",
+              marginBottom: "-59px",
+            }}
+          >
+            <p>Lütfen geçerli bir email giriniz</p>
+          </div>
         )}
+
         <br />
         <br />
         <TextField

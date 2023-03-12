@@ -1,12 +1,16 @@
-import * as yup from "yup";
+import { object, string, number, date, InferType } from "yup";
 
-const validations = yup.object().shape({
-  email: yup.string().email().required("Zorunlu Alan"),
-  firstName: yup.string().min(5).required("Zorunlu Alan"),
-  //   passWordConfirms: yup
-  //     .string()
-  //     .oneOf([yup.ref("password")])
-  //     .required("Zorunlu Alan"),
+const validations = object({
+  name: string().required(),
+  email: string().email().required(),
+  // email: yup.string().email().required("Zorunlu Alan"),
+  // firstName: yup.string().required(),
+  // lastName: yup.string().required("Zorunlu Alan"),
+  // age: yup.string().required("Zorunlu Alan"),
+  // passWordConfirms: yup
+  //   .string()
+  //   .oneOf([yup.ref("password")])
+  //   .required("Zorunlu Alan"),
 });
 
 export default validations;

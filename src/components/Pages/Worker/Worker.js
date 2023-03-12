@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useFormik } from "formik";
 import { Box, Toolbar, Grid, TextField, Alert } from "@mui/material";
 import Radio from "@mui/material/Radio";
@@ -11,6 +11,7 @@ import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
 import Checkbox from "@mui/material/Checkbox";
 import Button from "@mui/material/Button";
+import emailjs from "@emailjs/browser";
 
 import img from "./kurye-ol.png";
 import validationSchema from "./Validations";
@@ -38,6 +39,28 @@ function Worker() {
     });
 
   const labell = { inputProps: { "aria-label": "Checkbox demo" } };
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_esnafkurye",
+        "template_k1ixuf9",
+        form.current,
+        "m09QVU6uH6LsJtNxj"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
 
   return (
     <Box noValidate autoComplete="off">
@@ -68,7 +91,7 @@ function Worker() {
       </Grid>
       <Toolbar />
       <h1>Hemen başvurunu yap</h1>
-      <form onSubmit={handleSubmit}>
+      <form ref={form} onSubmit={handleSubmit}>
         <br />
         <TextField
           name="firstName"
@@ -302,7 +325,13 @@ function Worker() {
           <br />
         </Box>
         <br />
-        <Button variant="contained" type="submit" color="error">
+        <Button
+          onClick={sendEmail}
+          variant="contained"
+          type="submit"
+          color="error"
+          ref={form}
+        >
           Formu Gönder
         </Button>
         <br />

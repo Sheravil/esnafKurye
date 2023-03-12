@@ -19,7 +19,7 @@ function Worker() {
   const { handleSubmit, handleChange, handleBlur, values, errors, touched } =
     useFormik({
       initialValues: {
-        name: "İsim",
+        firstName: "İsim",
         lastName: "Soyisim",
         age: "Yaş",
         number: "TelefonNumarası",
@@ -38,8 +38,6 @@ function Worker() {
     });
 
   const labell = { inputProps: { "aria-label": "Checkbox demo" } };
-
-  console.log(errors, "hata");
 
   return (
     <Box noValidate autoComplete="off">
@@ -73,7 +71,7 @@ function Worker() {
       <form onSubmit={handleSubmit}>
         <br />
         <TextField
-          name="name"
+          name="firstName"
           onChange={handleChange}
           id="outlined-basic"
           label="İsim"
@@ -81,17 +79,9 @@ function Worker() {
           color="error"
           onBlur={handleBlur}
         />
-        {errors.name && touched.name && (
-          <div
-            style={{
-              fontSize: "small",
-              color: "#DC0000",
-              marginBottom: "-59px",
-            }}
-          >
-            <p>Lütfen geçerli bir name giriniz</p>
-          </div>
-        )}
+        {errors.firstName && touched.firstName ? (
+          <div>{errors.firstName}</div>
+        ) : null}
 
         <br />
         <br />
@@ -104,7 +94,9 @@ function Worker() {
           color="error"
           onBlur={handleBlur}
         />
-
+        {errors.lastName && touched.lastName ? (
+          <div>{errors.lastName}</div>
+        ) : null}
         <br />
         <br />
         <TextField
@@ -115,6 +107,17 @@ function Worker() {
           variant="outlined"
           color="error"
         />
+        {errors.age && touched.age && (
+          <div
+            style={{
+              fontSize: "small",
+              color: "#DC0000",
+              marginBottom: "-59px",
+            }}
+          >
+            <p>Lütfen geçerli bir name giriniz</p>
+          </div>
+        )}
         <br />
         <br />
         <TextField
